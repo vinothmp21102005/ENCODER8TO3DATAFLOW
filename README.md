@@ -10,7 +10,10 @@ To implement  Encoder 8 To 3 in Dataflow Modelling using verilog and validating 
 
 **Encoder 8 To 3**
 
-The 8 to 3 line Encoder is also known as Octal to Binary Encoder. In 8 to 3 line encoder, there is a total of eight inputs, i.e., D0, D1, D2, D3, D4, D5, D6, and D7 and three outputs, i.e., A0, A1, and A2. In 8-input lines, one input-line is set to true at a time to get the respective binary code in the output side. Below are the block diagram and the truth table of the 8 to 3 line encoder.
+* The 8 to 3 line Encoder is also known as Octal to Binary Encoder. 
+* In 8 to 3 line encoder, there is a total of eight inputs, i.e., D0, D1, D2, D3, D4, D5, D6, and D7 and three outputs, i.e., A0, A1, and A2.
+* In 8-input lines, one input-line is set to true at a time to get the respective binary code in the output side. 
+* Below are the block diagram and the truth table of the 8 to 3 line encoder.
 
 ![image](https://github.com/naavaneetha/ENCODER8TO3DATAFLOW/assets/154305477/0bc242c1-eb9e-4c47-afe5-30428470efc3)
 
@@ -36,21 +39,44 @@ Figure 02  Encoder 8 * 3
 
 **Procedure**
 
-/* write all the steps invloved */
+1.Type the program in Quartus software.
+
+2.Compile and run the program.
+
+3.Generate the RTL schematic and save the logic diagram.
+
+4.Create nodes for inputs and outputs to generate the timing diagram.
+
+5.For different input combinations generate the timing diagram.
 
 **PROGRAM**
 
-/* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
+Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
+## Developed by : VINOTH M P
+## REGISTER NUMBER : 212223240182
 
-Developed by: RegisterNumber:
-*/
+
+```verilog
+module encoder_top(din, a, b, c); 
+input [0:7] din; 
+output a,b,c; 
+assign a=din[4] | din[5] | din[6] | din[7]; 
+assign b=din[2] | din[3] | din[6] | din[7];
+assign c=din[2] | din[4] | din[6] | din[7];
+endmodule
+```
 
 **RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
 
+![image](https://github.com/Renusri-Naraharasetty/ENCODER8TO3DATAFLOW/assets/146916363/4f531527-415a-48f0-a610-a82277383076)
+
+
 **TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
 
-**RESULTS**
+![image](https://github.com/Renusri-Naraharasetty/ENCODER8TO3DATAFLOW/assets/146916363/cf41682a-5f80-4cc1-a2b7-18c4de0ddef6)
 
 
+**RESULTS**:
+Therefore the code has been successfully executed.
 
 
